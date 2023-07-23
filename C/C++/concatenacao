@@ -1,0 +1,25 @@
+// CONCATENAÇÃO
+
+// Concatenando em uma frase, de linha unica
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main ()
+{
+    int idade;
+    double salario, altura;
+    char sexo;
+    string nome;
+
+    idade = 20
+    salario = 5800.0
+    altura = 1.62
+    sexo = 'F'
+    nome = "Rebeca Rodrigues"
+
+    cout << fixed << setprecision(2) << "A funcionaria " << nome << ", do sexo " << sexo << " tem " << idade << "anos e recebe " << salario << "por mes" << ednl
+
+    return 0;
+}
