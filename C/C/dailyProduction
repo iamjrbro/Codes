@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+	int partsPerHour;
+	int workHours;
+	int dailyProduction;
+	
+	printf("How many parts are fabricated per hour?:");
+	scanf("%d", &partsPerHour);
+	
+	printf("How many hours does the machines work per day?:");
+	scanf("%d", &workHours);
+	
+	dailyProduction = partsPerHour * workHours;
+	
+	printf("The daily production is of %d", dailyProduction);
+	
+	return 0;
+}
