@@ -1,0 +1,20 @@
+//This program sums two values.
+
+#include <stdio.h>
+int main()
+{
+    int a, b, c;
+
+    ///entry
+    printf("\nEnter value of a:");
+    scanf("%d", &a);
+    printf("\nEnter value of b:");
+    scanf("%d", &b);
+
+    //processing
+        c = a + b;
+
+    //exit
+    printf("The sum of %d and %d is %d", a, b, c);
+    return 0;
+}
