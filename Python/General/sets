@@ -1,0 +1,175 @@
+'''
+SETS
+
+Sets are similiar to lists. However, they avoid duplicated itens and don't use index.
+  1. it's defined by { }
+  These are some examples of what you can do with Sets while using Operators.
+'''
+
+# Union | (it joins both lists without the repeated numbers)
+
+list1 = [10, 20, 30, 40, 50]
+list2 = [10, 20, 60, 80]
+
+num1 = set(list1)
+num2 = set(list2)
+
+print(num1 | num2)
+
+
+# Difference - (it shows numbers that are present on the 1st list but not in the 2nd)
+
+list1 = [10, 20, 30, 40, 50]
+list2 = [10, 20, 60, 80]
+
+num1 = set(list1)
+num2 = set(list2)
+
+print(num1 - num2)
+
+
+# Symmetric different ^ (remove all the duplicates numbers from both lists)
+
+list1 = [10, 20, 30, 40, 50]
+list2 = [10, 20, 60, 80]
+
+num1 = set(list1)
+num2 = set(list2)
+
+print(num1 ^ num2)
+
+
+# And & (it shows the duplicated numbers from both lists)
+
+list1 = [10, 20, 30, 40, 50]
+list2 = [10, 20, 60, 80]
+
+num1 = set(list1)
+num2 = set(list2)
+
+print(num1 & num2)
+
+
+# Verifying the size of a list (how many itens there's on the list)
+
+list1 = [10, 20, 30, 40, 50]
+list2 = [10, 20, 60, 80]
+
+num1 = set(list1)
+num2 = set(list2)
+
+print(len(num1))
+print(len(num2))
+
+
+
+
+'''
+SETS - FUNCTIONS
+
+These are some of the functions that you can do on Sets with the Operators.
+   obs:
+   Remove: if you try to remove something that's not in the Set, it will present you an error (#4).
+   Discard: if you try to remove something that's not in the Set, it will print the list without any error (#6).
+'''
+
+# 1. Adding itens to a Set
+
+s = {1, 2, 3, 4}
+s.add(5)
+
+print(s)
+
+
+# 2. Updating a Set with some itens
+
+s = {1, 2, 3, 4}
+s.update({5, 6, 7, 8})
+
+print(s)
+
+
+# 3. Removing an item from a Set with Remove
+
+s = {1, 2, 3, 4}
+s.remove(2)
+
+print(s)
+
+
+# 4. Trying to remove an item that is not in the Set with Remove
+
+s = {1, 2, 3, 4}
+s.remove(8)
+
+print(s)
+
+
+# 5. Removing an item from a Set with Discard
+
+s = {1, 2, 3, 4}
+s.discard(1)
+
+print(s)
+
+
+# 6. Trying to remove an item that is not in the Set with Discard
+
+s = {1, 2, 3, 4}
+s.discard(8)
+
+print(s)
+
+
+
+
+'''
+SETS WITH STRINGS
+
+Basically the same as on the "sets.py" archive, but writing the code as strings.
+
+    These are some examples of what you can do with Sets while using Operators and writing the code as strings.
+'''
+
+# Union | (it joins both lists without the repeated letters)
+
+set1 = {'a', 'b', 'c', 'd'}
+set2 = {'d', 'e', 'f', 'g'}
+set3 = {'g', 'h', 'i', 'j'}
+
+set4 = set1.union(set3)
+
+print(set4)
+
+
+# Difference - (it shows all the letters that are present on the 1st list but not in the 2nd)
+
+set1 = {'a', 'b', 'c', 'd'}
+set2 = {'d', 'e', 'f', 'g'}
+set3 = {'g', 'h', 'i', 'j'}
+
+set4 = set2.difference(set3)
+
+print(set4)
+
+
+# Symmetric different ^ (remove all the duplicates letters from both lists)
+
+set1 = {'a', 'b', 'c', 'd'}
+set2 = {'d', 'e', 'f', 'g'}
+set3 = {'g', 'h', 'i', 'j'}
+
+set4 = set3.symmetric_difference(set2)
+
+print(set4)
+
+
+# And & (it shows the duplicated letters from both lists)
+
+set1 = {'a', 'b', 'c', 'd'}
+set2 = {'d', 'e', 'f', 'g'}
+set3 = {'g', 'h', 'i', 'j'}
+
+set4 = set1.union(set3)
+
+print(set4)
