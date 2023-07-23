@@ -1,0 +1,464 @@
+'''
+LISTS
+
+Used to store more than one information within a variable, keeping the data in sequence.
+  -> to create a list, use square brackets [ ]
+'''
+
+# This is an example of a list of some brazilian cities
+
+cities = ['Rio de Janeiro' , 'Fortaleza' , 'Palmas' , 'Recife']
+
+print(cities)
+
+
+
+
+'''
+LISTS AND TUPLES
+
+    Lists: are mutable, you can change things by the end of it, using, by example, the Append function. It's defined by [ ].
+    Tuples: are immutable, you cannot change it. It's defined by ( ).
+'''
+
+# Identifying which one is which one
+
+colors_list = ['black', 'blue', 'green', 'pink']
+values_tuples = (20, 42, 80, 102)
+
+print(type(colors_list))
+print(type(values_tuples))
+
+
+# Multipling the Tuples 
+
+values_tuples = (20, 42, 80, 102)
+
+twolists = values_tuples * 2
+print(twolists)
+
+
+# Trying to change a item of the Tuples list with Append
+
+values_tuples = (20, 42, 80, 102)
+
+values_tuples.append(90)
+
+print(values_tuples)
+
+
+
+
+'''
+LISTS AND ARRAYS
+
+Arrays shorten lists.
+
+    obs: you have to import it.
+    obs2: you can find Efficient arrays of numeric values on docs.python.org
+    obs3: efficients used in this example:
+      u: wchar_t
+      i: signed int
+      f: float
+'''
+
+# How is usually done
+
+letters = ['a', 'b', 'c', 'd']
+numbers_i = [10, 20, 30, 40]
+numbers_f = [1.1, 1.2, 1.3, 1.5]
+
+print(letters)
+print(numbers_i)
+print(numbers_f)
+print()
+
+
+# Arrays
+
+from array import array
+
+letters = array('u'['a', 'b', 'c', 'd'])
+numbers_i = array('i'[10, 20, 30, 40])
+numbers_f = array('f'[1.1, 1.2, 1.3, 1.5])
+
+print(letters)
+print(numbers_i)
+print(numbers_f)
+
+
+
+
+'''
+LIST - ASSOCIATION WITH ZIP
+
+It associates itens from different lists, one by one, using the Zip function.
+'''
+
+# Example using two lists (associating colors and values)
+
+colors = ['black', 'blue', 'green', 'pink']
+values = [20, 42, 80, 102]
+
+twolists = zip(colors, values)
+
+print(list(twolists))
+
+
+# Example using four lists (weekend eatables for four different people)
+
+fruits = ['blueberry', 'banana', 'strawberry', 'apple']
+candy = ['bubblegum', 'fini', 'juice', 'pie']
+drinks = ['coke', 'pepsi', 'vodka', 'gin']
+food = ['strognoff', 'pizza', 'pasta', 'lasagna']
+
+weekend = zip(fruits, candy, drinks, food)
+
+print(list(weekend))
+
+
+
+
+'''
+LISTS CONCATENATION
+
+Adding a list inside another.
+'''
+
+# 1. Multipling a list by 4
+
+numbers = [1, 2, 3, 4]
+
+final = numbers * 4
+print(final)
+
+
+# 2. Adding two different lists
+
+numbers = [1, 2, 3, 4]
+letters = ['a', 'b', 'c', 'd']
+
+final = numbers + letters
+print(final)
+
+
+# 3. Adding two different lists (same as #2), but using the extend function
+
+numbers = [1, 2, 3, 4]
+letters = ['a', 'b', 'c', 'd']
+
+numbers.extend(letters)
+print(numbers)
+
+
+# 4. Adding two different lists and multipling one of them
+
+numbers = [1, 2, 3, 4]
+letters = ['a', 'b', 'c', 'd']
+
+final = numbers + letters * 6
+print(final)
+
+
+# 5. Adding a list inside a list
+
+names = [['Julia', 'Leo'], ['Keyla', 'Adriana']]
+
+print(names)
+
+
+# 6. Adding a list inside a list, put looking for specific infos using index and itens (in this example, index 0)
+
+# index          0                 1
+names = [['Julia', 'Leo'], ['Keyla', 'Adriana']]
+# itens      0       1         0         1
+
+print(names[0])
+
+
+# 7. Adding a list inside a list, put looking for specific infos using index and itens (in this example, index 1 and item 1)
+
+
+# index          0                 1
+names = [['Julia', 'Leo'], ['Keyla', 'Adriana']]
+# itens      0       1         0         1
+
+print(names[1][1])
+
+
+# 8. Adding a list inside a list, put looking for specific infos using index and itens (in this example, I used numbers as itens)
+
+
+# index   0          1
+age = [[18, 22], [19, 24]]
+# itens 0   1      0   1
+
+print(age[1])
+
+
+# index   0          1
+age = [[18, 22], [19, 24]]
+# itens 0   1      0   1
+
+print(age[0][1])
+
+
+
+
+'''
+LISTS - FUNCTIONS
+
+There functions that you can execute inside a list. You can find these fuctions on Pythons website.
+'''
+
+# Append: it append or add item x to the end of a list
+
+cities = ['Rio de Janeiro', 'Fortaleza', 'Palmas', 'Recife'] 
+
+cities.append('São Paulo')
+
+print(cities)
+
+
+# Remove: it removes the user-specified item. It is very useful if we know the item
+
+cities = ['Rio de Janeiro', 'Fortaleza', 'Palmas', 'Recife'] 
+
+cities.remove('Fortaleza')
+
+print(cities)
+
+
+# Insert: inserts the specified item x at index position i
+
+cities = ['Rio de Janeiro', 'Fortaleza', 'Palmas', 'Recife'] 
+
+cities.insert(3,'Limeira')
+
+print(cities)
+
+
+# Pop: remove an item at a specified index and display the removed item. After removing, the remaining items moved forward to fill the index gap
+
+cities = ['Rio de Janeiro', 'Fortaleza', 'Palmas', 'Recife'] 
+
+cities.pop(0)
+
+print(cities)
+
+
+# Sort: sort the items in Ascending order
+
+cities = ['Rio de Janeiro', 'Fortaleza', 'Palmas', 'Recife'] 
+
+cities.sort()
+print(cities)
+
+
+
+
+'''
+LISTS - INPUT
+
+Lists using input to interact with users.
+  1. the Split function used after 'fruits_user' makes the list possible, because it slipts the itens everytime that identifies a comma.
+  -> the user has to type the list, seprating the itens by ','.
+'''
+
+# Example creating a list of fruits from the user's input
+
+fruits_user = input('Please, type your list using commas to separate the itens:')
+
+fruitlist = fruits_user.split(', ')
+
+print(fruitlist)
+
+
+
+
+'''
+LISTS - MANIPULATION
+
+    1. to look for an specific information inside a list, you can use it's index (#1).
+    2. keep in mind that positive numbers are from right to left, while negative numbers are from left to right (#2).
+    3. if you want to change a specific info inside a list without making any alteration on it, you can look it throught index and change it (#3).
+'''
+
+# 1 
+cities = ['Rio de Janeiro' , 'Fortaleza' , 'Palmas' , 'Recife']
+# index        0                 1           2           3
+print(cities[2])
+
+
+#2
+cities = ['Rio de Janeiro' , 'Fortaleza' , 'Palmas' , 'Recife']
+# index        0                 1           2           3
+print(cities[-0])
+
+
+#3
+cities = ['Rio de Janeiro', 'Fortaleza', 'Palmas', 'Recife']
+# index        0                 1           2           3
+
+cities[3] = 'Alagoas'
+print(cities)
+
+
+
+
+'''
+LISTS - UNPACKING
+
+Used to extract informations from lists and shortten code.
+'''
+
+# How is usually done
+
+products = ('Banana', 'Blueberry', 'Apple', 'Coco')
+
+item1 = products[0]
+item2 = products[1]
+item3 = products[2]
+item4 = products[3]
+
+print(item1)
+print(item2)
+print(item3)
+print(item4)
+
+
+# How you can do
+
+products = ('Banana', 'Blueberry', 'Apple', 'Coco')
+
+item1 , item2 , item3, item4 = products
+
+print(item1)
+print(item2)
+print(item3)
+print(item4)
+
+
+# You can also remove some itens
+
+products = ('Banana', 'Blueberry', 'Apple', 'Coco')
+
+item1 , item2 , item3, *others = products
+
+print(item1)
+print(item2)
+print(item3)
+
+
+
+
+'''
+LISTS WITH FOR LOOP
+
+Adding For Loop inside a list.
+'''
+
+values = [40, 80, 120, 260, 426, 122]
+
+for x in values:
+    print(f'The final value of this product is ${x}.')
+
+
+
+
+'''
+LISTS WITH FOR LOOP
+
+Adding For Loop inside a list.
+'''
+
+values = [40, 80, 120, 260, 426, 122]
+
+for x in values:
+    print(f'The final value of this product is ${x}.')
+
+
+
+
+'''
+LISTS - INPUT TO INTERACT WITH USERS
+
+Using Input to check itens on a list.
+'''
+
+# Example where the user is able to check if there´s a color avaible on stock
+
+color = input('Enter the desired color:')
+colors = ['green', 'yellow', 'brown', 'red']
+
+if color.lower() in colors:
+    print('Available on stock')
+
+else:
+    print('No available at the moment')    
+
+
+
+
+'''
+SETS
+
+This code develops a program that generate 3 lists according to the needs below:
+
+    list1 = employees that own a car and work on the night shift
+    list2 = employees that own a car and work on the day shift
+    list3 = employees that don't own a car
+'''
+
+employee = {'Jaline', 'Pablo', 'Daniel', 'Carlos', 'Roberta', 'Borges', 'Hailey', 'Marcela'}
+day_shift = {'Jaline', 'Daniel', 'Pablo', 'Hailey'}
+night_shift = {'Carlos', 'Roberta', 'Borges', 'Marcela'}
+own_a_car = {'Jaline', 'Roberta', 'Daniel', 'Pablo'}
+
+
+# list1 = employees that own a car and work on the night shift
+
+night_shift_own_car = night_shift.__and__(own_a_car)
+print(night_shift_own_car)
+
+
+# list2 = employees that own a car and work on the day shift
+
+day_shift_own_car = day_shift.__and__(own_a_car)
+print(day_shift_own_car)
+
+
+# list3 = employees that don't own a car
+
+not_car = employee.difference(own_a_car)
+print(not_car)
+
+
+
+'''
+ YOU CAN ALSO DO LIKE THIS
+
+ In the follow examples, instead of creating a new variable, "Set" is used
+'''
+
+employee2 = {'Jaline', 'Pablo', 'Daniel', 'Carlos', 'Roberta', 'Borges', 'Hailey', 'Marcela'}
+day_shift2 = {'Jaline', 'Daniel', 'Pablo', 'Hailey'}
+night_shift2 = {'Carlos', 'Roberta', 'Borges', 'Marcela'}
+own_a_car2 = {'Jaline', 'Roberta', 'Daniel', 'Pablo'}
+
+
+# list1 = employees that own a car and work on the night shift
+
+list1 = set(own_a_car2).intersection(night_shift2)
+print(list1)
+
+
+# list2 = employees that own a car and work on the day shift
+
+list2 = set(own_a_car2).intersection(day_shift2)
+print(list2)
+
+# list3 = employees that don't own a car
+
+list3 = set(employee2).difference(own_a_car2)
+print(list3)
