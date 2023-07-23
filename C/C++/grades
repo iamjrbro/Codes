@@ -1,0 +1,24 @@
+//Program that calculates four grades of a student and determines its arithmetic average.
+
+#include <stdio.h>
+int main()
+{
+    float grade, a, b, c, d;
+// Entrada
+    printf("Enter the first grade:");
+    scanf("%f", &a);
+    printf("Enter the second grade:");
+    scanf("%f", &b);
+    printf("Enter the third grade:");
+    scanf("%f", &c);
+    printf("Enter the fourth grade:");
+    scanf("%f", &d);
+
+//Processamento
+
+ grade = (a + b + c + d) / 4;
+
+//Saida
+
+printf("The arithmetic average is %.2f:", grade);
+}
