@@ -1,0 +1,28 @@
+//This code generates a data input and output program.
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char name [60];
+    char gender;
+    int age;
+    double salary, profession;
+    
+   
+    
+    strcpy (name, "Halsey");
+    char = 'F';
+    age = 22;
+    salary = 18.200;
+    
+  
+    
+        printf("name = %s\n", name);
+        printf("gender = %c\n", gender);
+        printf("age = %d\n", age);
+        printf("salary = %21f\n", salary);
+    
+    return 0;
+}
