@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    float height;
+    float width;
+    float area;
+    float paint;
+    float yield = 2.0;
+    
+    printf("Enter the height of your wall:");
+    scanf("%f", &height);
+    
+    printf("Enter the width of your wall:");
+    scanf("%f", &width);
+    
+    area = height * width;
+    paint = area / yield;
+    
+    printf("You will need %.2f liters of paint to paint this wall.\n", paint);
+
+    return 0;
+}
