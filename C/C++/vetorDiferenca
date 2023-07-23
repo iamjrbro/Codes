@@ -1,0 +1,22 @@
+// Dado um vetor de seis posições, com n�meros inteiros positivos, determinar e imprimir a maior e a menor diferença entre dois elementos consecutivos do vetor.
+
+#include <stdio.h>
+
+int main() {
+    int v[6] = {5, 6};  // Substitua os elementos do vetor pelos valores desejados
+    int i, diferenca, maior_diferenca;
+
+    maior_diferenca = v[1] - v[0];
+
+    for (i = 2; i < 6; i++) {
+        diferenca = v[i] - v[i - 1];
+        
+        if (diferenca > maior_diferenca) {
+            maior_diferenca = diferenca;
+        }
+    }
+
+    printf("Maior diferenca: %d\n", maior_diferenca);
+
+    return 0;
+}
