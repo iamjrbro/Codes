@@ -1,0 +1,42 @@
+void main () {
+
+// Using int variables
+
+// Printing an int variable
+int a = 50;
+printf("%d", a);
+
+// Printing the addition of two int variables 
+int a = 26;
+int b = 60;
+printf("%d", a + b);
+
+// Printing the addition of three int variables 
+
+int a = 26;
+int b = 60;
+int c = 14;
+printf("%d", a + b + c);
+
+
+
+
+// Using float variables
+
+// Printing a float variable
+float a = 50;
+printf("%d", a);
+
+// Printing the addition of two float variables 
+float a = 26;
+float b = 60;
+printf("%d", a + b);
+
+// Printing the addition of three float variables 
+
+float a = 26;
+float b = 60;
+float c = 14;
+printf("%d", a + b + c);
+
+}
