@@ -1,0 +1,6 @@
+value = int(input('Please, type your product value:'))
+
+while value > 20:
+    value = (value * 0.10 + value)
+    print(f'Your products final price will be ${value}')
+    break
