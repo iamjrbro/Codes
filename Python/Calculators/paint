@@ -1,0 +1,10 @@
+y = int(input('What is the yield of your paint can? :'))
+height = int(input('What is the height of your wall? :'))
+width = int(input('What is the width of your wall? :'))
+
+def paint():
+    area = height * width
+    total = area / y
+    print(f'You will need {total} cans of wall paint')
+
+paint()
