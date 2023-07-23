@@ -1,0 +1,218 @@
+# CLASSES
+
+'''
+Classes are used to agroup data and functions and can be reused.
+
+Class = employee 
+Objects = name, last name, birthday, email, cellphone number and adress
+
+''' 
+
+# In this example, you cannot add another employee because the parameters are directly within the Class
+
+class Employee:
+    name ='Jesse'
+    last_name = 'Rose'
+    birthday = '01/08/1994'
+    email = 'jsk8@gmail.com'
+    cellphone = '808563368'
+    adress = '918 Saint George st'
+
+employee1 = Employee()    
+
+print(employee1.name)
+print(employee1.last_name)
+print(employee1.birthday)
+print(employee1.email)
+print(employee1.cellphone)
+print(employee1.adress)
+
+
+
+# this code develops a program that are able to calculate somebody's age by importing the Datetime module and using Class.
+
+from datetime import datetime
+
+class Person:
+   def __init__(self, name, last_name, birthdayear):
+    self.name = name
+    self.last_name = last_name
+    self.birthdayear = birthdayear
+
+    def personage(self):
+        currentyear = datetime.now().year
+        self.birthdayear = int(currentyear - self.birthdayear)
+        return self.birthdayear
+
+
+person1 = Person('Jesse', 'Rose', '1994')
+person2 = Person('Cristal', 'MCallin', '1996')
+person3 = Person('Abel', 'Machado', '2000')
+person4 = Person('Sabrina', 'Delfante', '2002')
+
+print(Person.personage(person1))
+
+
+
+
+# CLASSES CONSTRUCTORS
+
+'''
+Classes Constructos are used to shorten code by creating the Parameter inside the object
+'''
+
+# creating the Class 
+
+class Employee:
+   def __init__(self, name, last_name, birthday, email, cellphone, adress):
+    self.name = name
+    self.last_name = last_name
+    self.birthday = birthday
+    self.email = email
+    self.cellphone = cellphone
+    self.adress = adress
+
+
+# creating the Object 
+
+employee1 = Employee('Jesse', 'Rose', '01/08/1994', 'jsk8@gmail.com', '808563368', '918 Saint George st')
+employee2 = Employee('Cristal', 'MCallin', '12/04/1996', 'cristal22@gmail.com', '228866330', '818 George Blvr')
+employee3 = Employee('Abel', 'Machado', '17/08/2000', 'am@gmail.com', '895214565', '303 Roger Crallin st')
+employee4 = Employee('Sabrina', 'Delfante', '03/06/2002', 'delfantes@gmail.com', '236552014', '32 Leviano Blvr')
+
+
+# printing employee1
+
+print(employee1.name)
+print(employee1.last_name)
+print(employee1.birthday)
+print(employee1.email)
+print(employee1.cellphone)
+print(employee1.adress)
+
+
+# printing employee2
+
+print(employee2.name)
+print(employee2.last_name)
+print(employee2.birthday)
+print(employee2.email)
+print(employee2.cellphone)
+print(employee2.adress)
+
+
+# printing employee3
+
+print(employee3.name)
+print(employee3.last_name)
+print(employee3.birthday)
+print(employee3.email)
+print(employee3.cellphone)
+print(employee3.adress)
+
+
+# printing employee4
+
+print(employee4.name)
+print(employee4.last_name)
+print(employee4.birthday)
+print(employee4.email)
+print(employee4.cellphone)
+print(employee4.adress)
+
+
+
+
+# CLASSES WITH OBJECTS
+
+# in this example, you are able to add another employee because the parameters won't be directly within the Class, due to the Pass function.
+
+# creating the Class employee1
+
+class Employee:
+    pass
+
+
+# creating the Object employee1
+
+employee1 = Employee()
+
+
+# creating the Parameters employee1
+
+employee1.name = 'Jesse'
+employee1.last_name = 'Rose'
+employee1.birthday = '01/08/1994'
+employee1.email = 'jsk8@gmail.com'
+employee1.cellphone = '808563368'
+employee1.adress = '918 Saint George st'
+
+
+# print employee1
+
+print(employee1.name)
+print(employee1.last_name)
+print(employee1.birthday)
+print(employee1.email)
+print(employee1.cellphone)
+print(employee1.adress)
+
+
+# a new Def function is created so Name and Last name can be in the same line (Full name).
+
+
+# creating the Class 
+
+class Employee:
+    def __init__(self, name, last_name, birthday, email, cellphone, adress):
+     self.name = name
+     self.last_name = last_name
+     self.birthday = birthday
+     self.email = email
+     self.cellphone = cellphone
+     self.adress = adress
+ 
+     def fullname(self): 
+         return self.name + ' ' + self.last_name
+ 
+ 
+ # creating the Object 
+ 
+ employee1 = Employee('Jesse', 'Rose', '01/08/1994', 'jsk8@gmail.com', '808563368', '918 Saint George st')
+ employee2 = Employee('Cristal', 'MCallin', '12/04/1996', 'cristal22@gmail.com', '228866330', '818 George Blvr')
+ employee3 = Employee('Abel', 'Machado', '17/08/2000', 'am@gmail.com', '895214565', '303 Roger Crallin st')
+ employee4 = Employee('Sabrina', 'Delfante', '03/06/2002', 'delfantes@gmail.com', '236552014', '32 Leviano Blvr')
+ 
+ print(Employee.fullname(employee1))
+
+
+
+
+# MORE FUNCTIONS
+
+# a new Def function is created so Name and Last name can be in the same line (Full name).
+
+
+# creating the Class 
+
+class Employee:
+   def __init__(self, name, last_name, birthday, email, cellphone, adress):
+    self.name = name
+    self.last_name = last_name
+    self.birthday = birthday
+    self.email = email
+    self.cellphone = cellphone
+    self.adress = adress
+
+    def fullname(self): 
+        return self.name + ' ' + self.last_name
+
+
+# creating the Object 
+
+employee1 = Employee('Jesse', 'Rose', '01/08/1994', 'jsk8@gmail.com', '808563368', '918 Saint George st')
+employee2 = Employee('Cristal', 'MCallin', '12/04/1996', 'cristal22@gmail.com', '228866330', '818 George Blvr')
+employee3 = Employee('Abel', 'Machado', '17/08/2000', 'am@gmail.com', '895214565', '303 Roger Crallin st')
+employee4 = Employee('Sabrina', 'Delfante', '03/06/2002', 'delfantes@gmail.com', '236552014', '32 Leviano Blvr')
+
+print(Employee.fullname(employee1))
