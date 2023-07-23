@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+
+    int num, predecessor, successor, square, root;
+
+    printf("Type an integer:");
+    scanf("%d", &num);
+    
+
+predecessor = (num - 1), successor = (num + 1), square = (num * 2), root = (num * num);
+
+    printf("The predecessor of %d is %d, its successor is %d, its square is %d and its root is %d", num, predecessor, successor, square, root),
+    scanf("%d", &predecessor, &successor, &square, &root);
+
+    
+    return 0;
+}
