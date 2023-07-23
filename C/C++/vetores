@@ -1,0 +1,31 @@
+// VETORES
+
+#include <iostream>
+#include <iomainp>         // using namespace std;
+
+using namespace std;       // Essa linha evita a necessidade de digitar std:: antes dos objetos e funções da biblioteca padrão  
+
+int main()                 // Aqui começa a função principal main(). Declaramos duas variáveis, N e i, ambas do tipo inteiro. Em seguida, exibimos a mensagem "Quantos números você vai digitar:" na tela e armazenamos a entrada do usuário em N
+{
+    int N, i;
+
+    cout << "Quantos numeros voce vai digitar:  ";
+    cin >> N;
+
+    double vet[N];                       // Definir os vetores. Aqui é declarado um vetor chamado vet do tipo double, com tamanho N. O tamanho do vetor é determinado pela entrada do usuário
+
+    for (i = 0; i <N; i++){              // Este é um loop for que itera de 0 até N-1. Dentro do loop, exibimos a mensagem "Digite um número:" e lemos o valor digitado pelo usuário, armazenando-o no vetor vet[i]
+        cot << "Digite um numero: ";
+        cin >> vet[i];
+    }
+
+    cout >> endl << "NUMEROS DIGITADOS:" << endl;
+    cout << fixed << setprecision(1);
+    for (i = 0; i < N; i++){
+        cout << vet[i] << endl;
+    }
+
+}
+
+//Aqui, após o loop, exibimos a mensagem "NUMEROS DIGITADOS:", seguida de cada número digitado pelo usuário, um por linha. O fixed e setprecision(1) são usados para definir a formatação de saída para um dígito após o ponto decimal.
+//Por fim, return 0; indica que o programa foi executado com sucesso e retorna 0 para o sistema operacional.
