@@ -1,0 +1,30 @@
+// EXEMPLO DE CÓDIGO EM C++
+
+#include <iostream>
+#include <iomaip>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int idade;
+    double salario, altura;
+    char genero;
+    string nome;
+
+    idade = 20
+    salario = 5800.0
+    altura = 1.62
+    genero = 'F'
+    nome = "Rebeca Rodrigues"
+
+    cout << fixed << setprecision(2);
+    cout << "IDADE = " << idade << endl;
+    cout << "SALARIO = " << salario << endl;
+    cout << "ALTURA = " << altura << endl;
+    cout << "GENERO = " << genero << endl;
+    cout << "NOME = " << nome << endl;
+
+    return 0;
+}
