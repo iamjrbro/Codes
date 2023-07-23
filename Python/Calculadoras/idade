@@ -1,0 +1,22 @@
+from datetime import datetime
+
+class CalculadoraIdade:
+    def __init__(self, nome, sobrenome, aniversario):
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.aniversario = aniversario
+
+    def calcular_idade(self):
+        current_year = datetime.now().year
+        idade = current_year - int(self.aniversario)
+        return idade
+
+
+nome = input("Digite seu nome: ")
+sobrenome = input("Digite seu sobrenome: ")
+aniversario = input("Digite seu ano de nascimento: ")
+
+calculadora = CalculadoraIdade(nome, sobrenome, aniversario)
+idade = calculadora.calcular_idade()
+
+print("A idade de", nome, sobrenome, "é", idade, "anos.")
