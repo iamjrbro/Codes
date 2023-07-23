@@ -1,0 +1,104 @@
+# DICTIONARY
+
+'''
+Dictionares uses index in the format of Keys and Values. It accepts string, integer, float, boolean...
+'''
+
+# This is an example where a dictionary is created to storage a student's informations #
+
+# Printing all the dictionary
+
+student = {'name': 'Jaline', 'age': 18, 'final_grade': 'A', 'approvement status': True} 
+
+print(student)
+
+
+# Printing an especific info through index
+
+student = {'name': 'Jaline', 'age': 18, 'final_grade': 'A', 'approvement status': True} 
+
+print(student['age'])
+
+
+
+'''
+For Loop inside the dictionary.
+'''
+
+# Printing only the keys
+
+student = {'name': 'Jaline', 'age': 18, 'final_grade': 'A', 'approvement status': True} 
+
+for x in student.keys():
+    print(x)
+
+
+# Printing only the values
+
+student = {'name': 'Jaline', 'age': 18, 'final_grade': 'A', 'approvement status': True} 
+
+for x in student.values():
+    print(x)
+
+
+# Printing both, keys and values
+
+student = {'name': 'Jaline', 'age': 18, 'final_grade': 'A', 'approvement status': True} 
+
+for x in student.items():
+    print(x)
+
+
+# Printing both, keys and values, in a different way (it prints all in a single line)
+
+student = {'name': 'Jaline', 'age': 18, 'final_grade': 'A', 'approvement status': True} 
+print(student)
+
+
+
+
+'''
+Dictionary Manipulation
+'''
+
+# manipulating data inside the Dictionary. 
+
+# Updating infos
+
+student = {'name': 'Jaline', 'age': 18, 'final_grade': 'A', 'approvement status': True} 
+
+student.update({'name': 'Frederic', 'age': 16, 'approvement status': False})
+
+print(student)
+
+
+# Adding info
+
+student = {'name': 'Jaline', 'age': 18, 'final_grade': 'A', 'approvement status': True} 
+
+student.update({'adress' : '11321 Clover Avenue'})
+
+print(student)
+
+
+# Getting a info
+
+student = {'name': 'Jaline', 'age': 18, 'final_grade': 'A', 'approvement status': True} 
+
+student.get('approvement status')
+
+print(student.get('approvement status'))
+
+
+# Adding a list inside the dictionary
+
+student = {
+    'name': 'Jaline', 
+'age': 18, 
+'final_grade': 'A', 
+'approvement status': True, 
+'Classes': ['English', 'Chemistry', 'Mathematics', 'Biology']
+} 
+
+for keys, values in student.items():
+    print(keys, values)
