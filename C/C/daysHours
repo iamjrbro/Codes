@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int days, hours;
+    
+    printf("Type a quantity of days:");
+    scanf("%d", &days);
+
+days = (days * 24);
+
+    printf("These days are equivalent to %d hours", days);
+    scanf("%d", &days);
+
+    return 0;
+}
