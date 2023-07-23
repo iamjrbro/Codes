@@ -1,0 +1,22 @@
+// Faça um programa que leia o valor da temperatura corporal de um paciente (float). Caso a temperatura lida seja maior ou igual a 37.5, apresente a mensagem: â€œVocÃª estÃ¡ com febreâ€. Caso o contrÃ¡rio, apresente a mensagem â€œSua temperatura estÃ¡ normalâ€.
+
+#include <stdio.h>
+
+int main()
+{
+    float temperatura;
+
+    printf("Insira sua temperatura: ");
+    scanf("%f", &temperatura);
+
+
+    if(temperatura >= 37.5)
+    {
+         printf("\nVocÃª estÃ¡ com febre! Sua temperatura e %.2f", temperatura);
+    }
+    else 
+    {
+        printf("\nVocÃª nÃ£o estÃ¡ com febre! Sua temperatura e %.2f", temperatura);
+    }
+
+}
