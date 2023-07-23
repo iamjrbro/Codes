@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() 
+{
+    float meters;
+    
+    printf("Type a number, in meters: ");
+    scanf("%f", &meters);
+
+    float cm = meters * 100;
+    float mm = meters * 1000;
+
+    printf("%.2f meters are equivalent to %.2f centimeters and %.2f millimeters.", meters, cm, mm);
+    return 0;
+}
