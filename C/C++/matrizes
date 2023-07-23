@@ -1,0 +1,28 @@
+// MATRIZES
+
+#include <iostream>    // Esta é uma diretiva de inclusão da biblioteca <iostream>, que é necessária para entrada e saída de dados.
+
+using namespace std;   // Essa linha evita a necessidade de digitar std:: antes dos objetos e funções da biblioteca padrão.
+
+int main()            // Aqui começa a função principal main(). Declaramos quatro variáveis, M, N, i e j, todas do tipo inteiro. Em seguida, exibimos as mensagens "Quantas linhas a matriz terá?" e "Quantas colunas a matriz terá?" e lemos as entradas do usuário em M e N, respectivamente.
+{
+    int M, N, i, j;
+
+    cout << "Quantas linhas a matriz tera?: ";
+    cin >> M;
+    cout << "Quantas colunas a matriz tera?: ";
+    cin >> N
+
+    int mat[M][N]; // define coluna (M) e linhas (N) da Matriz. Aqui é declarada uma matriz chamada mat do tipo inteiro, com M linhas e N colunas. O tamanho da matriz é determinado pelas entradas do usuário.
+
+    for (i = 0; i < M; i++) {          // Este é um loop aninhado. O primeiro loop for itera sobre as linhas da matriz, de 0 a M-1, e o segundo loop for itera sobre as colunas da matriz, de 0 a N-1. Dentro do loop, imprimimos cada elemento da matriz mat[i][j] seguido por um espaço. Após cada linha, imprimimos uma quebra de linha usando cout << endl;.
+        for (j = 0; j < N; j++) {
+            cout << mat[i][j] << " ";
+        }
+        cout << endl;
+    }
+return 0;
+}
+
+//A instrução return 0; indica que o programa foi executado com sucesso e retorna 0 para o sistema operacional.
+// A matriz mat não foi inicializada com valores. Portanto, ao imprimir os elementos da matriz, você verá valores indeterminados ou lixo. Se você deseja preencher a matriz com valores específicos, será necessário adicionar essa lógica ao código.
