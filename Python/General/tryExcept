@@ -1,0 +1,73 @@
+'''
+TRY AND EXCEPT + ELSE AND FINALLY
+
+It´s used to handle exceptions or errors that may occur during the execution of a block of code. 
+'''
+
+'''
+Hypothetical situation where, if the user type a letter instead of a number on the 'Type the price of your product:' input, it will inform the user to type a value in numbers.
+'''
+
+# ELSE: in this example, the Finally condition will only be executed if the Try condition is right
+
+try:
+    value = int(input('Type the price of your product:'))
+    print(value)
+except ValueError:
+    print('Please, type a number') 
+else:
+    result = value * 20
+    print(result)    
+
+
+# FINALLY: in this example, the Else condition will only be executed if the Try condition is right
+
+try:
+    value = int(input('Type the price of your product:'))
+    print(value)
+except ValueError:
+    print('Please, type a number')    
+finally:
+    print('Thank you')
+except ValueError:
+    print('Please, type a number')    
+finally:
+    print('Thank you')     
+
+
+
+
+'''
+TRY AND EXCEPT
+
+    1. used in conducting tests in searches.
+    2. does not stop the program.
+    3. displays custom messages when it encounter an error.
+'''
+
+# In this example,  a List, that works with Index, and I've try to look for a not existing Index
+
+try:
+    letters = ['a', 'b', 'c', 'd']
+    print(letters[4])
+except IndexError:
+    print('This Index does not exist ')
+
+
+
+
+'''
+TRY AND EXCEPT WITH INPUT
+
+    1. used in conducting tests in searches.
+    2. does not stop the program.
+    3. displays custom messages when it encounter an error.
+'''
+
+# Hypothetical situation where, if the user type a letter instead of a number on the 'Type the price of your product:' input, it will inform the user to type a value in numbers.
+
+try:
+    value = int(input('Type the price of your product:'))
+    print(value)
+except ValueError:
+    print('Please, type a number')    
