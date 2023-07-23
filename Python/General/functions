@@ -1,0 +1,326 @@
+'''
+FUNCTIONS
+
+  Blocks of code that will perform some kind of task or manipulation of data, and may or may not receive input data (parameters/arguments).
+  Parameters are the names given to the attributes that a function can receive.
+  Usually used to make it all easier, so you dont need to ctrl+c ctrl+v your codes when working with big projects.
+    1. determined by the DEF condition
+    2. when you create it, you have to give it a name. So when you want to call it, just type the name + ().
+'''
+
+# This is a message boot example using Functions
+
+def welcome():
+    print('Are you still interested on selling your product on our website?')
+
+welcome()    
+
+
+# This is an example were the Function is called inside the other code (here, Ive used the While Loop Condition + Function)
+
+value = int(input('Please, type your product value:'))
+
+while value > 600:
+    value = (value * 0.10 + value)
+    print(f'Your products final price will be ${value}')
+    break
+
+welcome()
+
+
+
+
+
+'''
+FUNCTION - DEFAULT AND NON-DEFAULT
+
+    1. Default: you need to define the value in the parameter
+    2. Non-default: you dont need to define the value in the parameter
+        obs: In the parameter, non-default always comes before the default one.
+'''
+
+# This example uses Function, Parameters and Arguments
+
+def welcome(name,quantity):
+    print(f'Hello {name}.')
+    print(f'We have {str (quantity)} laptops available')  
+
+
+welcome('Hugo', 8)   
+
+
+# This example uses 'name' as the non-default option
+
+def welcome(quantity, name= 'Orochi'):
+    print(f'Hello {name}.')
+    print(f'We have {str (quantity)} laptops available')  
+
+welcome(2)
+
+
+# This example uses 'quantity' as the non-default option
+
+def welcome(name, quantity = '6'):
+    print(f'Hello {name}.')
+    print(f'We have {str (quantity)} laptops available')  
+
+welcome('Allison')
+
+
+
+
+'''
+FILTER FUNCTION
+
+Used to apply a function to an iterable, per item (list, tuple, dictionary, etc.).
+    -> it's generally, used with Lists.
+'''
+
+# Printing it as an object
+
+values = [12, 18, 40, 60, 80, 120]
+
+def remove40(x):
+    return x > 40
+
+print(filter(remove40, values))    
+
+
+# Printing it as a list
+
+values = [12, 18, 40, 60, 80, 120]
+
+def remove40(x):
+    return x > 40
+
+print(list(filter(remove40, values)))   
+
+
+# Using Lambda to reduce it to a single line code
+
+values = [12, 18, 40, 60, 80, 120]
+
+print(list(filter(lambda x: x > 40, values)))  
+
+
+
+
+'''
+FUNCTIONS - PARAMETERS ARGUMENTS 
+
+Used to create a repetitions, using less code line.
+    -> in this situation, a message boot for 4 different clients will be used as example
+'''
+
+# This example uses Function (without Parameters and Arguments)
+
+def welcome1():
+    print('Hello Noah')
+    print('We have 6 laptops available')
+
+
+def welcome2():
+    print('Hello Julia')
+    print('We have 5 laptops available')    
+
+
+def welcome3():
+    print('Hello Kylie')
+    print('We have 4 laptops available')    
+
+
+def welcome4():
+    print('Hello Stephan')
+    print('We have 3 laptops available')   
+
+welcome1()    
+welcome2()
+welcome3()
+welcome4()
+
+
+# This example uses Function, Parameters and Arguments
+
+def welcome(name,quantity):
+    print(f'Hello {name}.')
+    print(f'We have {str (quantity)} laptops available')  
+
+welcome('Noah', 6) 
+welcome('Julia', 5) 
+welcome('Kylie', 4) 
+welcome('Stephan', 3) 
+
+
+
+
+'''
+FUNCTIONS - PRINT AND RETURN
+
+    Print: performs a job. It does not store the information, either its variable. This function returns a value on the screen, but not on the program itself. Great for performing tasks because it uses code to run on screen and doesnt save it.
+    Return: calculates and returns a value, storing its variable, but does not print on the screen without being prompted. Its the best option if you want to use the same data later, because 'return' saves your variable in the memory.
+'''
+
+# Print
+
+def client1 (name):
+    print(f'Hello {name}')
+
+client1('Vanessa')     
+
+
+# Return
+
+def client2 (name):
+    return(f'Hello {name}')
+
+client2('Bruce')    
+
+
+# Both
+
+def client1 (name):
+    print(f'Hello {name}')
+
+x = client1('Vanessa')     
+
+
+def client2 (name):
+    return(f'Hello {name}')
+
+y = client2('Bruce')    
+
+print(x)
+print(y)
+
+
+
+
+'''
+FUNCTION - NUMBER OPERATIONS
+
+    1. variables that are not within a function, are called global variables.
+    2. in these examples, the variables are within the functions, referring to them.
+    3. if you duplicate a function by using a similiar name and changing variables, Python recognizes that they are two different functions (#2).
+'''
+
+# Simple adding operation
+
+def addnumbers():
+    n1 = 2000
+    n2 = 800
+    result = n1 + n2
+    print(result)
+
+addnumbers()
+
+
+ # 2. Simple adding operation, duplicating the function
+
+def addnumbers():
+    n1 = 2000
+    n2 = 800
+    result = n1 + n2
+    print(result)   
+
+def addnumbers2():
+    n1 = 4000
+    n2 = 444
+    result = n1 + n2
+    print(result)      
+
+addnumbers2()   
+
+
+
+
+'''
+FUNCTIONS - X ARGS WITH PARAMETERS
+
+Used when you are not sure how many parameters will be used in the program.
+  1. in this one, you are able to define the parameters as you want, not having to altered the parameters at the begging of the code.
+  2. allows you to choose the amount of parameters, how you are going to name them and which ones you want to use.
+  3. to define it just add a ** in the parameter, before the argument.
+'''
+
+# These are examples where a dealership wants to store specific data from some cars
+
+# one car only
+
+def dealer(**car):
+    return car
+
+print (dealer(model = 'X1', color = 'black')) 
+
+
+# multiple cars
+
+def dealer2(**cars):
+    return cars
+
+print (dealer2(model = 'Porshe 911 Carrera', color = 'white'))  
+print (dealer2(model = 'Mercdes AMG GT', board = 'F985L2')) 
+print (dealer2(model = 'X1', color = 'black', price = '$53826,45', board = 'L1TT3H4IR')) 
+print (dealer2(model = 'Lamborghini Veneno', price = '$4,5 m')) 
+
+
+
+
+'''
+FUNCTIONS - X ARGS
+
+  X ARGS: multiple arguments
+
+Commonly used when you are not sure of how many arguments will be used in the program.
+  1. to define it just add a * in the parameter, before the argument.
+  2. the data is set inside a variable.
+  3. in this, a 'for loop' has to be used to execute the operations and a 'return' has to be used to get the results.
+  4. in this example, 'return = 0' because its the start point of the 'for loop' , which is always gonna run every number setled inside the variable, one by one, and add it to result (#1). However, you can always change the number used in 'result' and it will be add in the end (#2).
+'''
+
+# 1
+def add (*numbers):
+  result = 0
+  for num in numbers:
+      result += num
+  return result
+
+x = add(2,3,4,7,4)  
+print(x)
+
+
+# 2
+
+def add2 (*numbers):
+  result = 6
+  for num in numbers:
+      result += num
+  return result
+  
+
+y = add2(2,3,4,7,4)  
+print(y)
+
+
+# printing add1 and add2 
+
+print(x,y)
+
+
+# printing add1 + add2 
+
+print(x+y)
+
+
+# printing add1 - add2 
+
+print(x-y)
+
+
+# printing add1 * add2 
+
+print(x*y)
+
+
+# printing add1 / add2 
+
+print(x/y)
