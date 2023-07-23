@@ -1,0 +1,32 @@
+/* Faca um programa que leia 3 notas e 3 pesos. Calcule e exiba a mÃ©dia ponderada deste aluno na tela
+
+MP = (N1P1 + N2P2 + N3*P3) / (P1+P2+P3)
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    float n1, n2, n3, peso1, peso2, peso3, mediaP;
+
+    printf("Insira a primeira nota: ");
+    scanf("%f", &n1);
+    printf(" ");
+    printf("Insira a segunda nota: ");
+    scanf("%f", &n2);
+    printf(" ");
+    printf("Insira a terceira nota: ");
+    scanf("%f", &n3);
+    printf(" ");
+    printf("Insira o peso da primeira nota: ");
+    scanf("%f", &peso1);
+    printf(" ");
+    printf("Insira o peso da segunda nota: ");
+    scanf("%f", &peso2);
+    printf(" ");
+    printf("Insira o peso da terceira nota: ");
+    scanf("%f", &peso3);
+
+    mediaP = (n1 * peso1 + n2 * peso2 + n3 * peso3) / (peso1 +  peso2 + peso3);
+
+    printf("A media ponderada e : %.2f", mediaP);
