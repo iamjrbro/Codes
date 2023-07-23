@@ -1,0 +1,73 @@
+#  used to compare informations. It returns a True or False answer, based on the information given.
+
+'''
+    ==   equal
+    !=   not equal
+    >    greater than
+    <    less than
+    >=   greater than or equal to
+    <=   less than or equal to
+'''
+
+# == equal
+
+operators = 10 == 12
+print(operators)
+
+# != not equal
+
+operators = 10 != 12
+print(operators)
+
+# > greater than
+
+operators = 10 > 12
+print(operadores)
+
+# < less than
+
+operators = 10 < 12
+print(operators)
+
+# >= greater than or equal to
+
+operators = 10 >= 12
+print(operators)
+
+# <= less than or equal to
+
+operators = 10 <= 12
+print(operators)
+
+
+
+
+'''
+MULTIPLE COMPARISON OPERATORS
+
+Used to shorten if/else statements while using multiple comparision operators.
+'''
+
+# Hypothetical case where a site only accepts to sell products that costs more than $20 and less than $40
+
+
+#1 product not accept
+
+value = 8
+
+if 20 <= value < 40:
+    print('Product accept')
+
+else:
+    print('Product not accept')
+
+    
+#2 product accept
+    
+value = 22
+
+if 20 <= value < 40:
+    print('Product accept')
+
+else:
+    print('Product not accept')
