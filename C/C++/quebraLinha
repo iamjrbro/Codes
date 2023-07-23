@@ -1,0 +1,50 @@
+// QUEBRA DE LINHA
+
+// endl quebra linha, caso vc queira escrever tudo um embaixo do outro
+// também é possível usar o \n, igual em C
+
+// usando \n
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Bom dia\n" ;
+    cout << "Boa noite\n";
+
+    return 0;
+}
+ 
+
+// usando endl
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Bom dia" << endl;
+    cout << "Boa noite" << endl;
+
+    return 0;
+}
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x, y;
+
+    x = 20;
+    y = 40; 
+
+    cout << x << endl;
+    cout << y << endl;
+
+    return 0;
+}
