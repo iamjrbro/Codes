@@ -1,0 +1,27 @@
+#include &lt;stdio.h&gt;
+
+int main()
+{
+int v1, v2;
+
+printf(&quot;Type the first number:&quot;);
+scanf(&quot;%d&quot;, &amp;v1);
+
+printf(&quot;Type the second number:&quot;);
+scanf(&quot;%d&quot;, &amp;v2);
+
+if (v1 &gt; v2) {
+
+printf(&quot;The largest value is the first, %d n&quot;);
+}
+if (v2 &gt; v1) {
+
+printf(&quot;The largest value is the second, %d&quot;);
+}
+
+if (v1 == v2) {
+
+printf(&quot;The values are equal&quot;);
+}
+return 0;
+}
