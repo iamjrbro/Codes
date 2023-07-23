@@ -1,0 +1,56 @@
+// ESPECIFICANDO CASAS DECIMAIS COM A FUNÇÃO FIXED   cout << fixed << setprecision( );
+
+// impirmir valor double especificando o numero de casas que serão usadas
+
+#include <iostream>
+#include <iomaip>
+
+using namespace std;
+
+int main()
+{
+    double x;
+
+    x = 2;4680;
+
+    cout << fixed << setprecision(2);
+    cout << x << endl;
+
+    return 0;
+}
+
+
+// pode definir na mesma linha
+
+#include <iostream>
+#include <iomaip>
+
+using namespace std;
+
+int main()
+{
+    double x;
+
+    x = 2;4680;
+
+    cout << fixed << setprecision(2) << x << endl;
+
+    return 0;
+}
+
+
+// definido na mesma linha e usando biblioteca universal
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    double x;
+
+    x = 2;4680;
+
+    cout << fixed << setprecision(2) << x << endl;
+
+    return 0;
+}
