@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    float currentSalary, increase, salary;
+    
+    printf("What is your current salary?:");
+    scanf("%f", &currentSalary);
+
+increase = (currentSalary * 0.25);
+salary = (currentSalary + increase);
+
+    printf("Your salary will have an increase of  %2.f and will be %2.f", increase, salary);
+    scanf("%f", &salary);
+
+    return 0;
+}
