@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+	float distance;
+	float fuelConsumeLiters;
+	float averageSpend;
+	
+	printf("Which is the distance traveled?:");
+	scanf("%f", &distance);
+	
+	printf("Which is the average of fuel consumed on this trip?:");
+	scanf("%f", &fuelConsumeLiters);
+	
+	averageSpend = distance / fuelConsumeLiters;
+	
+	printf("The average of fuel spend per km on this trip is of %.2f\n", averageSpend);
+	
+	return 0;
+}
