@@ -1,0 +1,22 @@
+from datetime import datetime
+
+class AgeCalculator:
+    def __init__(self, name, last_name, birthday_year):
+        self.name = name
+        self.last_name = last_name
+        self.birthday_year = birthday_year
+
+    def calc_age(self):
+        current_year = datetime.now().year
+        age = current_year - int(self.birthday_year)
+        return age
+
+
+name = input("What is your name?: ")
+last_name = input("What is your last name?: ")
+birthday_year = input("What is your birthday year?: ")
+
+calculator = AgeCalculator(name, last_name, birthday_year)
+age = calculator.calc_age()
+
+print(name, last_name, "is", age, "years old.")
