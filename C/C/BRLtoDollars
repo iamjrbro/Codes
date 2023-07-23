@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    
+    float brl;
+    float dollar;
+ 
+    printf("Type a number, in brl:");
+    scanf("%f", &brl);
+   
+    dollar = (brl / 5);
+
+    printf("With %.2f brl, you will be able to buy %.2f dollars", brl, dollar);
+
+    return 0;
+}
